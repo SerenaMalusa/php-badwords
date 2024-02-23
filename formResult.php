@@ -48,7 +48,7 @@
         <p>
             <?php 
                 echo "La parola da censurare era: {$word}. <br>                
-                La frase originale era: {$sentence}."
+                La frase originale era: {$sentence}"
             ?>
         </p>
 
