@@ -3,7 +3,10 @@
     $censored_word = $_GET['word-to-censor'];
     $sentence = $_GET['user-sentence'];
 
-    echo $censored_word.$sentence;
+    $censored_sentence = str_replace($censored_word, '***', $sentence);
+    echo "$censored_word 
+    $sentence
+    $censored_sentence"
 
 ?>
 
