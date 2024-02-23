@@ -31,7 +31,7 @@
     <meta name="description" content="php exercise">
 
     <!-- title and icon -->
-    <title>Everlead</title>
+    <title>PHP Badwords</title>
     <link rel="icon" href="./imgs/logo-small.ico">
 
     <!-- CSS -->
