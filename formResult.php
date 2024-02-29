@@ -4,6 +4,9 @@
     $word = $_GET['word-to-censor'];
     $sentence = $_GET['user-sentence'];
 
+    // get the lenght of the sentence
+    $sentence_length = strlen($sentence);
+
     // cycle for the lenght of word and add an * every time
     $censored_word = '';
     for ($i = 0; $i < strlen($word); $i++) {
@@ -11,8 +14,12 @@
     };
 
     // replace the word with asteriscs in sentence and save it 
-    $censored_sentence = str_replace($word, $censored_word, $sentence);
+    // $censored_sentence = str_replace($word, $censored_word, $sentence);
+    $censored_sentence = str_replace($word, '***', $sentence);
     // echo "$word $sentence $censored_sentence";
+
+    // get the lenght of the censored sentence
+    $censored_sentence_length = strlen($censored_sentence);
 
 ?>
 
@@ -43,12 +50,16 @@
     
     <div class="container mt-5">
 
-        <h2><?= $censored_sentence ?></h2>
+        <h2>
+            <?= $censored_sentence ?><br>
+            n. caratteri: <?= $censored_sentence_length ?>
+        </h2>
 
         <p>
             <?php 
                 echo "La parola da censurare era: {$word}. <br>                
-                La frase originale era: {$sentence}"
+                La frase originale era: {$sentence} <br>
+                n.caratteri: {$sentence_length}"
             ?>
         </p>
 
